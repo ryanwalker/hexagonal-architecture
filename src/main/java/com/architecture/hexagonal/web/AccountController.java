@@ -5,6 +5,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
     consumes = APPLICATION_JSON_VALUE)
 public class AccountController {
 
-  @RequestMapping(path = "/hello")
+  @GetMapping(path = "/hello")
   public ResponseEntity<Map<String, String>> hello() {
     Map<String, String> map = new HashMap<>();
     map.put("hello", "world");
